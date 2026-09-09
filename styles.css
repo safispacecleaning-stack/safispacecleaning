@@ -61,4 +61,143 @@ h3 { font-size: 1.8rem; }
 .stat-row { align-self: end; border-top: 1px solid rgba(255,255,255,.3); display: flex; gap: 28px; padding-top: 20px; }.stat-row div { display: flex; flex-direction: column; gap: 8px; }.stat-row strong { font: 600 1.5rem "Space Grotesk", sans-serif; }.stat-row span { color: rgba(255,255,255,.7); font-size: .78rem; }
 .services { background: var(--paper); }.section-heading { align-items: end; display: flex; justify-content: space-between; margin: auto auto 55px; max-width: 1240px; }.section-heading > p { color: var(--muted); line-height: 1.6; max-width: 330px; }.service-grid { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); margin: auto; max-width: 1240px; }.service-card { border: 1px solid var(--line); min-height: 330px; padding: 28px; position: relative; transition: transform .25s ease; }.service-card:hover { transform: translateY(-7px); }.service-card.featured { background: var(--orange); border-color: var(--orange); color: var(--white); }.service-number { color: var(--orange); font-size: .75rem; font-weight: 700; }.featured .service-number { color: #ffe1b7; }.service-card h3 { margin-top: 100px; }.service-card p { color: var(--muted); line-height: 1.55; max-width: 280px; }.featured p { color: rgba(255,255,255,.8); }.card-link { align-items: center; border: 1px solid currentColor; border-radius: 50%; bottom: 25px; display: flex; font-size: 1.3rem; height: 42px; justify-content: center; position: absolute; right: 25px; width: 42px; }
 .contact { background: #253532; color: var(--white); display: grid; gap: 8vw; grid-template-columns: 1fr .6fr; }.contact .section-label { color: #f3bc76; }.contact h2 { max-width: 650px; }.contact-action { align-self: end; }.contact-action p { color: rgba(255,255,255,.7); line-height: 1.6; }.button-light { background: var(--white); color: var(--ink); }.site-footer { display: flex; justify-content: space-between; padding: 24px 5vw; color: var(--muted); font-size: .78rem; }
-@media (max-width: 760px) { .site-header { padding: 18px 6vw; position: relative; }.menu-toggle { display: block; } nav { background: var(--white); border-bottom: 1px solid var(--line); display: none; flex-direction: column; gap: 20px; left: 0; padding: 24px 6vw; position: absolute; right: 0; top: 70px; z-index: 5; } nav.active { display: flex; }.hero { display: flex; flex-direction: column; gap: 42px; margin-top: 35px; padding: 0 6vw; }.hero-art { height: 390px; width: 100%; }.window { height: 180px; }.sofa { bottom: 20%; }.band { padding: 70px 6vw; }.intro, .contact { display: block; }.intro > div, .contact-action { margin-top: 36px; }.stat-row { justify-content: space-between; }.section-heading { align-items: start; display: block; }.section-heading > p { margin-top: 25px; }.service-grid { display: block; }.service-card { margin-bottom: 14px; min-height: 280px; }.service-card h3 { margin-top: 65px; }.site-footer { flex-direction: column; gap: 8px; padding: 20px 6vw; } }
+@media (max-width: 760px) { .site-header { padding: 18px 6vw; position: relative; }.menu-toggle { display: block; } nav { background: var(--white); border-bottom: 1px solid var(--line); display: none; flex-direction: column; gap: 20px; left: 0; padding: 24px 6vw; position: absolute; right: 0; top: 70px; z-index: 5; } nav.active { display: flex; }.hero { display: flex; flex-direction: column; gap: 42px; margin-top: 35px; padding: 0 6vw; }.hero-art { height: 390px; width: 100%; }.window { height: 180px; }.sofa { bottom: 20%; }.band { padding: 70px 6vw; }.intro, .contact { display: block; }.intro > div, .contact-action { margin-top: 36px; }.stat-row { justify-content: space-between; }.section-heading { align-items: start; display: block; }.section-heading > p { margin-top: 25px; }.service-grid { display: block; }.service-card { margin-bottom: 14px; min-height: 280px; }.service-card h3 { margin-top: 65px; }.site-footer { flex-direction: column; gap: 8px; padding: 20px 6vw; } }/* ===== SAFISPACE FINAL PROFESSIONAL POLISH ===== */
+
+body {
+  overflow-x: hidden;
+}
+
+.site-header {
+  position: relative;
+  z-index: 20;
+}
+
+.logo {
+  transition: transform .2s ease;
+}
+
+.logo:hover {
+  transform: translateY(-1px);
+}
+
+.nav-cta {
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.nav-cta:hover {
+  background: var(--ink);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.button-primary,
+.button-light {
+  box-shadow: 0 8px 20px rgba(32, 48, 45, .10);
+}
+
+.button-primary:hover,
+.button-light:hover {
+  box-shadow: 0 12px 26px rgba(32, 48, 45, .16);
+}
+
+.service-card {
+  background: rgba(255, 253, 248, .55);
+  border-radius: 6px;
+}
+
+.service-card.featured {
+  box-shadow: 0 16px 35px rgba(231, 124, 66, .18);
+}
+
+.card-link {
+  transition: transform .2s ease, background .2s ease;
+}
+
+.card-link:hover {
+  background: var(--ink);
+  color: var(--white);
+  transform: rotate(8deg);
+}
+
+.featured .card-link:hover {
+  background: var(--white);
+  color: var(--orange);
+}
+
+.hero-art {
+  box-shadow: 0 20px 45px rgba(32, 48, 45, .12);
+}
+
+.contact {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 50%;
+  right: -100px;
+  bottom: -120px;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 760px) {
+  nav.nav-open {
+    display: flex;
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    background: rgba(245, 243, 237, .96);
+    backdrop-filter: blur(10px);
+  }
+
+  .hero {
+    min-height: auto;
+    margin-bottom: 55px;
+  }
+
+  h1 {
+    font-size: clamp(3.1rem, 14vw, 4.8rem);
+  }
+
+  h2 {
+    font-size: clamp(2.4rem, 11vw, 3.8rem);
+  }
+
+  .hero-art {
+    min-height: 360px;
+    box-shadow: 0 14px 30px rgba(32, 48, 45, .10);
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .service-card {
+    min-height: 290px;
+  }
+
+  .stat-row {
+    gap: 14px;
+  }
+
+  .stat-row div {
+    flex: 1;
+  }
+}
