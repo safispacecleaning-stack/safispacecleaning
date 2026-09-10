@@ -200,4 +200,35 @@ body {
   .stat-row div {
     flex: 1;
   }
+}/* Payment section */
+.payment {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+align-items: center;
+}
+
+.payment-details {
+background: var(--white);
+border: 1px solid var(--line);
+border-radius: 20px;
+padding: 28px;
+}
+
+.payment-details p {
+margin: 0 0 18px;
+font-size: 1.05rem;
+line-height: 1.6;
+}
+
+.payment-details strong {
+font-family: "Space Grotesk", sans-serif;
+font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+.payment {
+grid-template-columns: 1fr;
+gap: 24px;
+}
 }
