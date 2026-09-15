@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Cleaning | Safispace Cleaning Services</title>
+  <meta name="description" content="Book professional cleaning services with Safispace Cleaning Services in Ongata Rongai.">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f3ed;
+      color: #20302d;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #20302d;
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .back {
+      color: white;
+      text-decoration: none;
+      border: 1px solid #b9d8c7;
+      padding: 8px 14px;
+      border-radius: 20px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 55px 20px 35px;
+    }
+
+    .hero span {
+      color: #2f6f65;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin: 12px 0;
+    }
+
+    .hero p {
+      color: #64716d;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .booking-box {
+      max-width: 700px;
+      margin: 10px auto 60px;
+      background: #fffdf8;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(32,48,45,0.08);
+    }
+
+    label {
+      display: block;
+      margin: 16px 0 7px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d5ddd8;
+      border-radius: 10px;
+      font-size: 16px;
+      background: white;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 24px;
+      padding: 16px;
+      border: none;
+      border-radius: 30px;
+      background: #2f6f65;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #20302d;
+    }
+
+    .note {
+      margin-top: 15px;
+      text-align: center;
+      color: #64716d;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .booking-box {
+        margin: 10px 15px 40px;
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Safispace</div>
+  <a class="back" href="index.html">← Home</a>
+</header>
+
+<section class="hero">
+  <span>Easy booking</span>
+  <h1>Book a clean.</h1>
+  <p>
+    Tell us what you need, where you are, and your preferred date and time.
+    We'll receive your request on WhatsApp and confirm with you.
+  </p>
+</section>
+
+<section class="booking-box">
+  <form id="bookingForm">
+
+    <label for="name">Full Name</label>
+    <input type="text" id="name" required placeholder="Your full name">
+
+    <label for="phone">Phone / WhatsApp Number</label>
+    <input type="tel" id="phone" required placeholder="07XXXXXXXX">
+
+    <label for="service">Cleaning Service</label>
+    <select id="service" required>
+      <option value="">Choose a service</option>
+      <option>Home Cleaning</option>
+      <option>Deep Cleaning</option>
+      <option>Office Cleaning</option>
+      <option>Sofa Cleaning</option>
+      <option>Mattress Cleaning</option>
+      <option>Kitchen & Bathroom Cleaning</option>
+      <option>Other Cleaning</option>
+    </select>
+
+    <label for="date">Preferred Date</label>
+    <input type="date" id="date" required>
+
+    <label for="time">Preferred Time</label>
+    <input type="time" id="time" required>
+
+    <label for="location">Cleaning Location</label>
+    <input type="text" id="location" required placeholder="Area / estate / location">
+
+    <label for="details">Additional Details</label>
+    <textarea id="details" placeholder="Tell us anything else we should know"></textarea>
+
+    <button type="submit">💬 Send Booking Request on WhatsApp</button>
+
+    <p class="note">
+      Your booking request will open WhatsApp for confirmation.
+    </p>
+
+  </form></section>
+
+<script>
+  const form = document.getElementById("bookingForm");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const service = document.getElementById("service").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    const location = document.getElementById("location").value;
+    const details = document.getElementById("details").value;
+
+    const message =
+      "Hello Safispace Cleaning Services!%0A%0A" +
+      "BOOKING REQUEST%0A" +
+      "Name: " + encodeURIComponent(name) + "%0A" +
+      "Phone: " + encodeURIComponent(phone) + "%0A" +
+      "Service: " + encodeURIComponent(service) + "%0A" +
+      "Date: " + encodeURIComponent(date) + "%0A" +
+      "Time: " + encodeURIComponent(time) + "%0A" +
+      "Location: " + encodeURIComponent(location) + "%0A" +
+      "Details: " + encodeURIComponent(details);
+
+    window.open(
+      "https://wa.me/254743595411?text=" + message,
+      "_blank"
+    );
+  });
+
+  document.getElementById("date").min =
+    new Date().toISOString().split("T")[0];
+</script>
+
+</body>
+</html>
