@@ -18,8 +18,6 @@
 
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css">
-
   <style>
     :root {
       --ink: #20302d;
@@ -485,6 +483,82 @@
       color: var(--muted);
     }
 
+    /* BOOKING */
+    .booking {
+      background: var(--paper);
+    }
+
+    .booking-box {
+      max-width: 760px;
+      margin: auto;
+      background: var(--white);
+      padding: 35px;
+      border-radius: 30px;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 50px rgba(32, 48, 45, 0.08);
+    }
+
+    .booking-form {
+      display: grid;
+      gap: 18px;
+    }
+
+    .form-group {
+      display: grid;
+      gap: 7px;
+    }
+
+    .form-group label {
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 15px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--teal);
+    }
+
+    .form-group textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .booking-note {
+      background: #eef5f0;
+      padding: 15px;
+      border-radius: 13px;
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .booking-submit {
+      width: 100%;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
     .cta {
       padding: 80px 0;
       background: var(--teal);
@@ -599,6 +673,14 @@
       .area-box {
         padding: 35px 20px;
       }
+
+      .booking-box {
+        padding: 25px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 480px) {
@@ -644,6 +726,7 @@
       <a href="#services">Services</a>
       <a href="#about">Why Safispace</a>
       <a href="#pricing">Prices</a>
+      <a href="#booking">Bookings</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -658,7 +741,6 @@
 
   </div>
 </header>
-
 
 <main id="home">
 
@@ -687,14 +769,12 @@
             💬 Book on WhatsApp
           </a>
 
-          <!-- WORKING PRICE BUTTON -->
           <a class="btn btn-secondary" href="#pricing">
             View price list
           </a>
 
         </div>
       </div>
-
 
       <div class="hero-card">
 
@@ -730,7 +810,6 @@
     </div>
   </section>
 
-
   <!-- TRUST -->
   <section class="trust-strip">
     <div class="container trust-grid">
@@ -758,7 +837,6 @@
     </div>
   </section>
 
-
   <!-- SERVICES -->
   <section class="section" id="services">
 
@@ -773,7 +851,6 @@
         </p>
       </div>
 
-
       <div class="services-grid">
 
         <div class="service-card">
@@ -785,7 +862,6 @@
           </p>
         </div>
 
-
         <div class="service-card">
           <div class="service-icon">✨</div>
           <h3>Deep Cleaning</h3>
@@ -794,7 +870,6 @@
             extra attention and care.
           </p>
         </div>
-
 
         <div class="service-card">
           <div class="service-icon">🏢</div>
@@ -805,7 +880,6 @@
           </p>
         </div>
 
-
         <div class="service-card">
           <div class="service-icon">🛋️</div>
           <h3>Sofa Cleaning</h3>
@@ -815,7 +889,6 @@
           </p>
         </div>
 
-
         <div class="service-card">
           <div class="service-icon">🛏️</div>
           <h3>Mattress Cleaning</h3>
@@ -824,7 +897,6 @@
             a fresher sleeping environment.
           </p>
         </div>
-
 
         <div class="service-card">
           <div class="service-icon">🧹</div>
@@ -839,7 +911,6 @@
 
     </div>
   </section>
-
 
   <!-- ABOUT -->
   <section class="section about" id="about">
@@ -863,7 +934,6 @@
           that make a real difference.
         </p>
       </div>
-
 
       <div class="about-box">
 
@@ -898,7 +968,6 @@
     </div>
   </section>
 
-
   <!-- PRICE LIST -->
   <section class="section pricing" id="pricing">
 
@@ -913,7 +982,6 @@
           Choose the service you need and book with us on WhatsApp.
         </p>
       </div>
-
 
       <div class="price-grid">
 
@@ -938,68 +1006,187 @@
           </div>
 
           <p class="price-description">
-            Includes deep washing, stain treatment,
-            vacuuming and deodorizing.
-          </p>
+            Includes thorough cleaning of kitchen surfaces, cabinets, sinks and appliances.
+</p>
+<div class="price">
+  From KSh 1,500
+</div>
+</div>
 
-        </div>
+<div class="price-card">
+  <h3>Bathroom Cleaning</h3>
+  <p class="price-description">
+    Includes cleaning of toilets, showers, sinks, tiles and bathroom surfaces.
+  </p>
+  <div class="price">
+    From KSh 1,000
+  </div>
+</div>
 
+<div class="price-card">
+  <h3>Office Cleaning</h3>
+  <p class="price-description">
+    Professional cleaning for offices and workspaces. Contact us for a quote.
+  </p>
+  <div class="price">
+    Contact us
+  </div>
+</div>
 
-        <!-- MATTRESS -->
-        <div class="price-card">
+</div>
+  </section></section>
 
-          <h3>🛏️ Mattress Cleaning</h3>
+<section id="why">
+  <div class="section-heading">
+    <span>Why Safispace</span>
+    <h2>Cleaning you can count on.</h2>
+  </div>
 
-          <div class="price-row">
-            <span>Single Mattress</span>
-            <span class="price">KSh 800</span>
-          </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <h3>Reliable service</h3>
+      <p>We treat every space with care and attention to detail.</p>
+    </div>
 
-          <div class="price-row">
-            <span>Double Mattress</span>
-            <span class="price">KSh 1,000</span>
-          </div>
+    <div class="why-card">
+      <h3>Fair prices</h3>
+      <p>Quality cleaning at prices that make sense.</p>
+    </div>
 
-          <div class="price-row">
-            <span>King Mattress</span>
-            <span class="price">KSh 1,500</span>
-          </div>
+    <div class="why-card">
+      <h3>Easy booking</h3>
+      <p>Contact us on WhatsApp and let us handle the rest.</p>
+    </div>
+  </div>
+</section></section>
 
-          <p class="price-description">
-            Removes dust, stains and allergens for
-            a fresher sleeping environment.
-          </p>
+<section id="areas">
+  <div class="section-heading">
+    <span>Areas we serve</span>
+    <h2>Cleaning around Ongata Rongai.</h2>
+  </div>
 
-        </div>
+  <p>
+    Safispace Cleaning Services proudly serves homes, offices and businesses
+    around Ongata Rongai and nearby areas.
+  </p>
+</section></section>
 
+<section id="why">
+  <div class="section-heading">
+    <span>Why Safispace</span>
+    <h2>Cleaning you can count on.</h2>
+  </div>
 
-        <!-- HOUSE -->
-        <div class="price-card">
+  <div class="why-grid"><div class="why-card">
+  <h3>Reliable service</h3>
+  <p>We treat every space with care and attention to detail.</p>
+</div>
 
-          <h3>🏠 House Cleaning</h3>
+<div class="why-card">
+  <h3>Fair prices</h3>
+  <p>Quality cleaning at prices that make sense.</p>
+</div>
 
-          <div class="price-row">
-            <span>General House Cleaning</span>
-            <span class="price">From KSh 2,500</span>
-          </div>
+<div class="why-card">
+  <h3>Easy booking</h3>
+  <p>Contact us on WhatsApp and let us handle the rest.</p>
+</div>>Quality cleaning at prices that make sense.</p>
+</div>
 
-          <div class="price-row">
-            <span>Deep House Cleaning</span>
-            <span class="price">From KSh 5,000</span>
-          </div>
+<div class="why-card">
+  <h3>Easy booking</h3>
+  <p>Contact us on WhatsApp and let us handle the rest.</p>
+</div></div>
+</div>
+</section>
 
-          <p class="price-description">
-            Pricing may vary depending on the size
-            and condition of the space.
-          </p>
+<section id="areas">
+  <div class="section-heading">
+    <span>Areas we serve</span>
+    <h2>Cleaning around Ongata Rongai.</h2>
+  </div>  <p>
+    Safispace Cleaning Services proudly serves homes, offices and businesses
+    around Ongata Rongai and nearby areas.
+  </p>
+</section>
 
-        </div>
+<section id="experience">
+  <div class="section-heading">
+    <span>Our experience</span>
+    <h2>A cleaner space, a better feeling.</h2>
+  </div>
 
+  <p>
+    From everyday home cleaning to deep cleaning and upholstery care,
+    Safispace Cleaning Services is here to help keep your space fresh,
+    comfortable and welcoming.
+  </p>
+</section>
 
-        <!-- OTHER -->
-        <div class="price-card">
+<section id="contact" class="contact-band">
+  <div>
+    <span>Ready when you are</span>
+    <h2>Let’s make your space feel like yours again.</h2>
+  </div>
 
-          <h3>🧼 Other Cleaning</h3>
+  <a href="https://wa.me/254743595411?text=Hello%20Safispace%2C%20I%20would%20like%20to%20book%20a%20cleaning%20service."
+     target="_blank">
+    💬 Chat on WhatsApp
+  </a>
+</section>
 
-          <div class="price-row">
-      
+<footer>
+  <div>
+    <strong>Safispace Cleaning Services</strong>
+    <p>Professional cleaning services in Ongata Rongai.</p>
+  </div>
+
+  <div class="social-links">
+    <a href="https://www.instagram.com/safispacecleaning?stkn=MTFjbjl5YWp1bHpo"
+       target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@safispacecleaning"
+       target="_blank">TikTok</a>
+    <a href="https://www.facebook.com/share/18or9JuKMJ/"
+       target="_blank">Facebook</a>
+  </div>
+
+  <p>© 2026 Safispace Cleaning Services. All rights reserved.</p>
+</footer>
+
+<script>
+  const bookingForm = document.getElementById("bookingForm");
+
+  if (bookingForm) {
+    bookingForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const service = document.getElementById("service").value;
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
+      const location = document.getElementById("location").value;
+      const details = document.getElementById("details").value;
+
+      const message =
+        "Hello Safispace Cleaning Services!%0A%0A" +
+        "Booking Request%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Phone: " + encodeURIComponent(phone) + "%0A" +
+        "Service: " + encodeURIComponent(service) + "%0A" +
+        "Date: " + encodeURIComponent(date) + "%0A" +
+        "Time: " + encodeURIComponent(time) + "%0A" +
+        "Location: " + encodeURIComponent(location) + "%0A" +
+        "Details: " + encodeURIComponent(details);
+
+      window.open(
+        "https://wa.me/254743595411?text=" + message,
+        "_blank"
+      );
+    });
+  }
+</script>
+
+</body>
+  </html>
