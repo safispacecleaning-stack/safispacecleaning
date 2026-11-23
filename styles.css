@@ -1,4 +1,3 @@
-
 :root {
   --ink: #09070A;
   --muted: #777078;
@@ -8,8 +7,6 @@
   --teal: #F02B91;
   --orange: #F5B82E;
   --line: rgba(240, 43, 145, .25);
-}
-
 }
 
 * { box-sizing: border-box; }
@@ -484,6 +481,7 @@ padding: 28px 20px;
               background 0.2s ease,
               color 0.2s ease,
               border-color 0.2s ease;
+}
 
 .social-links a:hover {
   background: var(--mint);
