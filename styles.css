@@ -51,7 +51,12 @@ h3 { font-size: 1.8rem; }
 .button { border-radius: 999px; display: inline-flex; font-weight: 700; gap: 15px; padding: 16px 22px; transition: transform .2s ease, background .2s ease; }
 .button:hover { transform: translateY(-3px); }
 .button-primary { background: var(--orange); color: var(--white); }
-.button-primary:hover { background: #cd6331; }
+.button-primary:hover {
+  background: #F5B82E;
+  color: #09070A;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(240, 43, 145, .2);
+}
 .text-link { border-bottom: 1px solid currentColor; padding-bottom: 5px; }
 .hero-art { background: var(--mint); border-radius: 4px; height: 560px; overflow: hidden; position: relative; }
 .sun-disc { background: #f5bd77; border-radius: 50%; height: 250px; position: absolute; right: 11%; top: 10%; width: 250px; }
