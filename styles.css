@@ -478,7 +478,7 @@ padding: 28px 20px;
     padding: 11px 15px;
     font-size: 13px;
   }
-
+.social-links a:hover {
   transform: translateY(-3px);
   background: var(--teal);
   border-color: var(--teal);
