@@ -524,3 +524,22 @@ padding: 28px 20px;
     justify-content: center;
   }
   }
+
+/* SAFISPACE FOOTER IMPROVEMENT */
+
+.site-footer {
+  align-items: center;
+  background: var(--ink);
+  border-top: 1px solid var(--line);
+  gap: 24px;
+  line-height: 1.6;
+}
+
+.site-footer strong {
+  color: var(--white);
+}
+
+.site-footer p {
+  margin: 8px 0;
+}
+  
