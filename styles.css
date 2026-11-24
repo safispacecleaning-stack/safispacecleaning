@@ -1,12 +1,12 @@
 :root {
-  --ink: #09070A;
-  --muted: #777078;
-  --paper: #100D11;
+  --ink: #171217;
+  --muted: #706570;
+  --paper: #FFF8FC;
   --white: #FFFFFF;
-  --mint: #F8C5E0;
+  --mint: #FCE4F1;
   --teal: #F02B91;
   --orange: #F5B82E;
-  --line: rgba(240, 43, 145, .25);
+  --line: rgba(240, 43, 145, .18);
 }
 
 * { box-sizing: border-box; }
