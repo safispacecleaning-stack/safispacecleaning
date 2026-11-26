@@ -125,14 +125,42 @@ body {
   box-shadow: 0 12px 26px rgba(32, 48, 45, .16);
 }
 
+
 .service-card {
-  background: rgba(255, 253, 248, .55);
-  border-radius: 6px;
+  background: #FFFFFF;
+  border: 1px solid rgba(240, 43, 145, .25);
+  border-radius: 18px;
+  padding: 28px;
+  min-height: 260px;
+  box-shadow: 0 8px 25px rgba(9, 7, 10, .08);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: #F02B91;
+  box-shadow: 0 16px 35px rgba(240, 43, 145, .16);
+}
+
+.service-card h3 {
+  color: #09070A;
+}
+
+.service-card p {
+  color: #777078;
+}
+
+.service-icon {
+  color: #F02B91;
+  font-size: 2rem;
+  margin-bottom: 18px;
 }
 
 .service-card.featured {
-  box-shadow: 0 16px 35px rgba(231, 124, 66, .18);
+  border: 1px solid #F5B82E;
+  box-shadow: 0 16px 35px rgba(245, 184, 46, .15);
 }
+
 
 .card-link {
   transition: transform .2s ease, background .2s ease;
